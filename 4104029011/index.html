@@ -13,6 +13,13 @@
         p {
             color: white;
         }
+        a.more3{
+
+          position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 300px;
+        }
 
     </style>
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.2.4.min.js"></script>
@@ -79,6 +86,16 @@
 
                 return false;
             });
+            $('iframe.3').hide(); //fade toggle the video
+            $('a.more3').click(function() {
+                $('iframe.3').fadeToggle('fast');
+                if ($(this).text() == 'watch his highlights')
+                    $(this).text('hide');
+                else
+                    $(this).text('watch his highlights');
+
+                return false;
+            });
 
 
 
@@ -93,6 +110,7 @@
         <h1>Gordon Hayward</h1>
         <p id='1'>This page is about Gordon Hayward, an Nba player, and also a competitve gaming player.</p>
     </center>
+    <HR>
     <p class='more'>Outside of basketball, Hayward is an avid video game player, and has been involved with the IGN Pro League. Some of the games he plays include StarCraft II, League of Legends and "Clash Royale". In 2015, Hayward's wife, Robyn, gave birth to the couple's
         first child. In July 2016, the couple's second child was born.</p>
     <a href='#' class='more'>know him personally</a>
@@ -130,7 +148,8 @@
         <a href='#' class='short2'>hide pictures</a>
     </center>
     <p>
-        <a href='https://www.youtube.com/watch?v=PGcY6hV25IU', style= 'font-size: 30px';>watch his highlights</a>
+<iframe class='3' width="560" height="315" src="https://www.youtube.com/embed/PGcY6hV25IU" frameborder="0" allowfullscreen></iframe>
+        <a href='#' class='more3' style= 'font-size: 30px';>watch his highlights</a>
     </p>
 
 
