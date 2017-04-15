@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>nba player</title>
+    <style>
+        body {
+            background-color: green;
+        }
+
+        h1,
+        p {
+            color: white;
+        }
+    </style>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.2.4.min.js"></script>
+    <script language="JavaScript">
+        $(document).ready(function() {
+            $('div.more').hide(); //bio
+            $('a.more-options').click(function() {
+                if ($('div.more').is(':hidden'))
+                    $('div.more').slideDown('slow');
+                else
+                    $('div.more').slideUp('slow');
+                return false;
+            });
+            $('p.more').hide(); //personally
+            $('a.short').hide();
+            $('a.more').click(function() {
+                $('p.more').fadeIn('1500');
+                $(this).hide();
+                $('a.short').show();
+                return false;
+            });
+            $('a.short').click(function() {
+                $('p.more').fadeOut('1500');
+                $('a.more').show();
+                $(this).hide();
+                return false;
+            });
+
+            $('p.more1').hide(); //pictures
+            $('a.short2').hide();
+            $('a.more2').click(function() {
+                $('p.more1').toggle('slow');
+                if ($(this).text() == 'show more pictures of him')
+                    $(this).text('hide pictures');
+                else
+                    $(this).text('show more pictures of him');
+                return false;
+
+            });
+            $("p#1").click(function() { //fading the intro
+                $(this).fadeTo("slow", Math.random());
+            });
+            $("div#2").click(function() { //fading the picture
+                $(this).fadeTo("slow", Math.random());
+            });
+            $('p.4').hide(); //slide toggle the picture pc games
+            $('a.1').click(function() {
+                $('p.4').slideToggle('slow');
+                if ($(this).text() == 'him playing computer games with his daughter')
+                    $(this).text('hide');
+                else
+                    $(this).text('him playing computer games with his daughter');
+                return false;
+
+            });
+
+            $('p.5').hide(); //fade toggle the picture teamusa
+            $('a.3').click(function() {
+                $('p.5').fadeToggle('fast');
+                if ($(this).text() == 'him playing in team USA')
+                    $(this).text('hide');
+                else
+                    $(this).text('him playing in team USA');
+
+                return false;
+            });
+
+
+
+
+
+        });
+    </script>
+</head>
+
+<body>
+    <center>
+        <h1>Gordon Hayward</h1>
+        <p id='1'>This page is about Gordon Hayward, an Nba player, and also a competitve gaming player.</p>
+    </center>
+    <p class='more'>Outside of basketball, Hayward is an avid video game player, and has been involved with the IGN Pro League. Some of the games he plays include StarCraft II, League of Legends and "Clash Royale". In 2015, Hayward's wife, Robyn, gave birth to the couple's
+        first child. In July 2016, the couple's second child was born.</p>
+    <a href='#' class='more'>know him personally</a>
+    <a href='#' class='short'>hide information</a>
+    <center>
+        <p class='4'>
+            <img src='games.jpg' height='250' width='300'>
+        </p>
+        <a href='#' class='1'>him playing computer games with his daughter</a>
+        <p class='5'>
+            <img src='teamusa.jpg' height='250' width='300'>
+        </p>
+        <a href='#' class='3'>him playing in team USA</a>
+
+
+
+        <div id='2'>
+            <img src='gordon hayward.jpeg' height="400" width="300">
+        </div>
+        <div id='bio'>
+            <a href='#' class='more-options'>know more about him as a basketball player</a>
+            <div class="more">
+                <p>Gordon Daniel Hayward (born March 23, 1990) is an American professional basketball player for the Utah Jazz of the National Basketball Association (NBA). He played college basketball at Butler University for two seasons where he led his
+                    team to a runner-up finish in the 2010 NCAA Tournament his sophomore season. He was selected by the Utah Jazz with the ninth overall pick in the 2010 NBA draft.
+                </p>
+            </div>
+        </div>
+
+        <p class='more1'>
+            <img src='before.jpg' height='250' width='200'>
+            <img src='middle.jpg' height='250' width='200'>
+            <img src='now.jpg' height='250' width='400'>
+        </p>
+        <a href='#' class='more2'>show more pictures of him</a>
+        <a href='#' class='short2'>hide pictures</a>
+    </center>
+    <p>
+        <a href='https://www.youtube.com/watch?v=PGcY6hV25IU'>watch his highlights</a>
+    </p>
+
+
+</body>
+
+</html>
